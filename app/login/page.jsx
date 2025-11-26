@@ -37,7 +37,7 @@ export default function LoginPage() {
       console.log("🔑 Token received:", id_token ? "Yes" : "No");
 
       // Use port 5001 for auth server
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:5001";
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
       console.log("📡 Sending to backend:", `${backendUrl}/api/auth/google`);
 
       // Send the token to backend for verification
