@@ -32,7 +32,7 @@ export default function GeneratePage() {
         const userData = JSON.parse(storedUser);
         
         try {
-          const response = await fetch(`http://localhost:5000/api/tokens/balance/${userData.id}`);
+          const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/tokens/balance/${userData.id}`);
           const data = await response.json();
           
           if (data.success) {
@@ -121,7 +121,7 @@ export default function GeneratePage() {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/analyze', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/analyze`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ export default function GeneratePage() {
       }
 
       // Refresh token balance after analyze
-      const balanceResponse = await fetch(`http://localhost:5000/api/tokens/balance/${userData.id}`);
+      const balanceResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/tokens/balance/${userData.id}`);
       const balanceData = await balanceResponse.json();
       if (balanceData.success) {
         setTokenBalance(balanceData.data.tokenBalance);
@@ -168,7 +168,7 @@ export default function GeneratePage() {
     setStep('generating');
 
     try {
-      const response = await fetch('http://localhost:5000/api/generate-complete', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/generate-complete`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

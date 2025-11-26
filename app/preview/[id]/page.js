@@ -59,7 +59,7 @@ export default function PreviewPage() {
   // Function to fetch token balance
   const fetchTokenBalance = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/tokens/balance/${userId}`);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/tokens/balance/${userId}`);
       const data = await response.json();
       
       if (data.success) {
@@ -73,7 +73,7 @@ export default function PreviewPage() {
   useEffect(() => {
     const fetchWebsite = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/website/${params.id}`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/website/${params.id}`);
         const data = await response.json();
 
         if (!response.ok) {
@@ -182,7 +182,7 @@ export default function PreviewPage() {
       const userData = JSON.parse(storedUser);
 
       // Call backend API to apply AI edits
-      const response = await fetch('http://localhost:5000/api/edit-website', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/edit-website`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -210,7 +210,7 @@ export default function PreviewPage() {
 
       // ⭐ Save edited code to backend/database
       try {
-        await fetch(`http://localhost:5000/api/website/${params.id}/update`, {
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/website/${params.id}/update`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
