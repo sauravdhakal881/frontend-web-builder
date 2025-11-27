@@ -5,7 +5,7 @@ import styles from "./login.module.css";
 export default function LoginPage() {
   useEffect(() => {
     console.log("🔧 Setting up Google Sign-In...");
-    console.log("📍 Backend URL:", process.env.NEXT_PUBLIC_BACKEND_URL);
+    console.log("📍 Backend URL:", process.env.NEXT_PUBLIC_AUTH_SERVER_URL);
     console.log("🔑 Google Client ID:", process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID);
 
     // Load Google script dynamically
@@ -37,7 +37,7 @@ export default function LoginPage() {
       console.log("🔑 Token received:", id_token ? "Yes" : "No");
 
       // Use port 5001 for auth server
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+      const backendUrl = process.env.NEXT_PUBLIC_AUTH_SERVER_URL;
       console.log("📡 Sending to backend:", `${backendUrl}/api/auth/google`);
 
       // Send the token to backend for verification
