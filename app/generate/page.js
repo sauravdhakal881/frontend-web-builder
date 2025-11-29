@@ -509,7 +509,7 @@ export default function GeneratePage() {
         <footer className="footer">
           <div className="footer-content">
             <Sparkles className="icon-xs" />
-            <span>Powered by ChatRock AI</span>
+            <span>Powered by Website Builder</span>
           </div>
         </footer>
       </div>

@@ -428,7 +428,7 @@ export default function LandingPage() {
       <div className="landing-container">
         {/* Logo */}
         <div className="logo">
-          <span className="logo-text">ChatRock AI</span>
+          <span className="logo-text">Website Builder</span>
         </div>
 
         {/* Animated Background */}
