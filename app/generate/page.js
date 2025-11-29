@@ -225,35 +225,35 @@ export default function GeneratePage() {
         <header className="header">
           {/* User Profile - Top Left */}
           {user && (
-            <div className="user-profile-container" ref={dropdownRef}>
-              <button className="user-profile-btn" onClick={toggleDropdown}>
+            <div className="user-profile-container1" ref={dropdownRef}>
+              <button className="user-profile-btn1" onClick={toggleDropdown}>
                 {user.picture && !imageLoadError ? (
                   <img 
                     src={user.picture} 
                     alt={user.name} 
-                    className="user-avatar"
+                    className="user-avatar1"
                     referrerPolicy="no-referrer"
                     crossOrigin="anonymous"
                     onError={handleImageError}
                     onLoad={handleImageLoad}
                   />
                 ) : (
-                  <div className="user-avatar-placeholder">
+                  <div className="user-avatar-placeholder1">
                     <User className="icon-sm" />
                   </div>
                 )}
               </button>
               
               {showDropdown && (
-                <div className="user-dropdown">
-                  <div className="user-dropdown-header">
-                    <div className="user-info">
-                      <p className="user-name">{user.name}</p>
-                      <p className="user-email">{user.email}</p>
+                <div className="user-dropdown1">
+                  <div className="user-dropdown-header1">
+                    <div className="user-info1">
+                      <p className="user-name1">{user.name}</p>
+                      <p className="user-email1">{user.email}</p>
                     </div>
                   </div>
-                  <div className="user-dropdown-divider"></div>
-                  <button className="user-dropdown-item logout-btn" onClick={handleLogout}>
+                  <div className="user-dropdown-divider1"></div>
+                  <button className="user-dropdown-item1 logout-btn1" onClick={handleLogout}>
                     <LogOut className="icon-sm" />
                     <span>Log Out</span>
                   </button>
