@@ -77,7 +77,7 @@ export default function PricingContent() {
 
       const userData = JSON.parse(storedUser);
 
-      const response = await fetch(`${process.env.BACKEND_URL}/api/tokens/purchase`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/tokens/purchase`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
