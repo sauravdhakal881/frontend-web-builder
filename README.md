@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Website Builder
 
-## Getting Started
+An AI-powered web app that generates fully responsive websites from simple text prompts.  
+Users can describe the website they want, and the system generates clean HTML, CSS, and JavaScript instantly.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Problem Statement
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Creating websites requires coding knowledge, time, and design skills.  
+Many individuals, startups, and small businesses struggle to build websites quickly.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Solution
 
-## Learn More
+AI Website Builder allows users to generate a complete responsive website simply by describing what they want.
 
-To learn more about Next.js, take a look at the following resources:
+The system:
+- Converts prompts into structured website layouts
+- Generates HTML, CSS, and JavaScript code
+- Ensures mobile responsiveness automatically
+- Allows editing and downloading generated code
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+-  Prompt-based website generation  
+-  Fully mobile responsive layouts  
+-  Edit generated code functionality  
+-  Download website files instantly  
+-  Copy code option for quick use  
+-  Fast generation using AI models  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Demo
+
+- Live Demo: frontend-medic-production.up.railway.app
+- Demo Video: https://drive.google.com/file/d/1UFwHSL6QbPlnDcp7KL-EhAm0Et418EEU/view?usp=sharing 
+
+---
+
+## Tech Stack
+
+Frontend
+- Next.js
+
+Backend
+- Node.js
+- Express.js
+
+Database
+- Prisma ORM
+- MySQL
+
+Other
+- AI API integration
+- Responsive design logic
