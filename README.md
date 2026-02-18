@@ -37,7 +37,7 @@ The system:
 
 ## Demo
 
-- Live Demo: frontend-medic-production.up.railway.app
+- Live Demo: https://frontend-medic-production.up.railway.app
 - Demo Video: https://drive.google.com/file/d/1UFwHSL6QbPlnDcp7KL-EhAm0Et418EEU/view?usp=sharing 
 
 ---
